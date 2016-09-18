@@ -14,10 +14,12 @@
    <div class="container" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
   	 <div class="form-group">
-  		 <input id="lunch-menu" type="text"
-  		 placeholder="list comma separated dishes you usually have for lunch"
-  		 class="form-control"
-       ng-model="lunch">
+  		 <input id="lunch-menu"
+        type="text"
+  		  placeholder="list comma separated dishes you usually have for lunch"
+  		  class="form-control"
+        ng-model="lunch"
+        style="border-color:{{messageColor}}">
        *Non counting empty places
   	 </div>
   	 <div class="form-group">
