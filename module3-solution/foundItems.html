@@ -1,0 +1,15 @@
+<!-- directive attrs: 
+	ctrl.items (an array of items), 
+	ctrl.remove(index) (a method) 
+-->
+<div class="row" >
+	<ul>
+		<li ng-repeat="item in ctrl.items">
+		  <span data-toggle="tooltip" title="{{ item.description}}">({{ item.short_name }}) {{ item.name }}</span>
+		  <button class="btn btn-default" ng-click="ctrl.remove({index: $index})">
+			<span class="glyphicon glyphicon-ok"></span> Don't want this one!
+		  </button>
+		</li>
+	</ul>
+</div> 
+<div class="row emptyMessage" ng-if="ctrl.isEmpty()">Nothing found!</div>
